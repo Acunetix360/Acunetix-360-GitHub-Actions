@@ -1,0 +1,21 @@
+{
+  "name": "acunetix-360-scan-action",
+  "version": "0.0.1",
+  "description": "This action requests a scan on Acunetix 360.",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js",
+    "build": "ncc build index.js --license licenses.txt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Muhammed Kılıç <muhammeddkilicc@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "axios": "^0.21.1",
+    "buffer": "^6.0.3",
+    "qs": "^6.9.6"
+  }
+}

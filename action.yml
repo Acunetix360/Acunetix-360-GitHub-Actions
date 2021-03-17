@@ -1,0 +1,33 @@
+name: 'Acunetix 360 Scanner'
+description: 'Acunetix 360 Scanner allows client actions to start scan tasks.'
+inputs:
+  website-id:
+    description: 'Unique id for your website on Acunetix 360.'
+    required: true
+    default: ''
+  scan-type:
+    description: 'Requested scan type for scan.'
+    required: true
+    default: ''
+  profile-id:
+    description: 'Unique profile id for your requested website scan profile on Acunetix 360.'
+    required: false
+    default: ''
+  user-id:
+    description: 'User id on Acunetix 360 API Credentials. Use GitHub Secrets.'
+    required: true
+    default: ''
+  api-token:
+    description: 'API token on Acunetix 360 API Credentials. Use GitHub Secrets.'
+    required: true
+    default: ''
+  base-url:
+    description: ''
+    required: false
+    default: 'https://www.acunetix360.com/'
+outputs:
+  scan-message:
+    description: 'Scan message for requested scan.'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
