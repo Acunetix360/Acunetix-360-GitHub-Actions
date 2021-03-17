@@ -1,4 +1,4 @@
-name: 'Acunetix 360 Scanner'
+name: 'Acunetix 360 Scan'
 description: 'Acunetix 360 Scanner allows client actions to start scan tasks.'
 inputs:
   website-id:
