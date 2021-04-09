@@ -143,20 +143,23 @@ function scanRequest() {
       }
 
     }).catch(function (error) {
-      if (!error.response.data.IsValid) {
+      if(error.response === undefined){
+        core.setFailed(`Error: ${error.syscall} ${error.code}  Hostname: ${error.hostname}`);
+        return -2
+      }else if (error.response.data != null && !error.response.data.IsValid) {
         if (isEmpty(error.response.data.ErrorMessage)) {
           core.setFailed(`Scan could not be created. Check error: ${error.response.data}`);
         } else {
           core.setFailed(`Scan could not be created. Check error message: ${error.response.data.ErrorMessage}`);
         }
-        return -2;
+        return -3;
       }
-      core.error(`Error: ${error.response.data}`);
-      return -3;
+      core.setFailed(`Error: ${error}`);
+      return -4;
     });
   } catch (error) {
     core.setFailed(error.message);
-    return -4;
+    return -5;
   }
 }
 
