@@ -1,5 +1,8 @@
 name: 'Acunetix 360 Scan'
 description: 'Acunetix 360 Scanner allows client actions to start scan tasks.'
+branding:
+  icon: 'radio'
+  color: 'red'
 inputs:
   website-id:
     description: 'Unique id for your website on Acunetix 360.'
