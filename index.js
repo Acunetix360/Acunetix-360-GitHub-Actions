@@ -3,7 +3,7 @@ const github = require('@actions/github');
 const axios = require('axios');
 const qs = require('qs');
 
-const baseUrl = 'https://www.acunetix360.com';
+const baseUrl = 'https://online.acunetix.com/';
 const createScanRequestEndpoint = '/api/1.0/scans/CreateFromPluginScanRequest';
 const scanStatusPath = '/scans/status/';
 

@@ -27,7 +27,7 @@ inputs:
   base-url:
     description: ''
     required: false
-    default: 'https://www.acunetix360.com/'
+    default: 'https://online.acunetix.com'
 outputs:
   scan-message:
     description: 'Scan message for requested scan.'

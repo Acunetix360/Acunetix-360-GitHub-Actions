@@ -10,7 +10,7 @@ const github = __nccwpck_require__(7069);
 const axios = __nccwpck_require__(1596);
 const qs = __nccwpck_require__(1850);
 
-const baseUrl = 'https://www.acunetix360.com';
+const baseUrl = 'https://online.acunetix.com/';
 const createScanRequestEndpoint = '/api/1.0/scans/CreateFromPluginScanRequest';
 const scanStatusPath = '/scans/status/';
 
