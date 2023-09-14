@@ -17,5 +17,8 @@
     "axios": "^0.21.2",
     "buffer": "^6.0.3",
     "qs": "^6.9.7"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.0"
   }
 }

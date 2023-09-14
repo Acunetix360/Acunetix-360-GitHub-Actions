@@ -27,10 +27,10 @@ inputs:
   base-url:
     description: ''
     required: false
-    default: 'https://online.acunetix.com'
+    default: 'https://online.acunetix360.com/'
 outputs:
   scan-message:
     description: 'Scan message for requested scan.'
 runs:
-  using: 'node12'
+  using: 'node20'
   main: 'dist/index.js'

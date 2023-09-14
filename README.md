@@ -50,7 +50,7 @@ jobs:
       # Starts actions with given inputs
       - name: Start Acunetix 360 Scan
         id: acunetix-360-scan-step
-        uses: Acunetix360/Acunetix-360-GitHub-Actions@v0.0.1
+        uses: Acunetix360/Acunetix-360-GitHub-Actions@v0.1.0
         with:
           website-id: '******' # FILL HERE
           scan-type: 'FullWithSelectedProfile'
