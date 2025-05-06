@@ -78,7 +78,7 @@ jobs:
           user-id: ${{ secrets.ACUNETIX_USER_ID }}
           api-token: ${{ secrets.ACUNETIX_API_TOKEN }}
           base-url: 'https://online.acunetix.com'
-		  wait-for-completion: false
+          wait-for-completion: false
           fail-on-level: 'DoNotFail'
       # Displays output for action
       - name: Display Scan Request Message
