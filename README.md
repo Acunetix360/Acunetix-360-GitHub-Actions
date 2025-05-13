@@ -26,7 +26,27 @@ This action requests a scan on [Acunetix 360](https://acunetix360.com/).
 
 ### `base-url`:
 
-**Optional**  Website URL for Acunetix 360.
+**Required**  Website URL for Acunetix 360.
+
+### `wait-for-completion`:
+
+**Optional** Fail the build if one of the selected scan severity is detected.
+
+### `fail-on-level`:
+
+**Optional** Severity filter. Options : 
+
+DoNotFail : Do not fail the build
+
+Critical  : Critical
+
+Critical,High : High or above 
+
+Critical,High,Medium : Medium or above
+
+Critical,High,Medium,Low : Low or above
+
+Critical,High,Medium,Low,Best Practice : Best Practices or above
 
 ## Outputs
 
@@ -45,12 +65,12 @@ on:
 
 jobs:
   acunetix_scan_job:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       # Starts actions with given inputs
       - name: Start Acunetix 360 Scan
         id: acunetix-360-scan-step
-        uses: Acunetix360/Acunetix-360-GitHub-Actions@v0.1.0
+        uses: Acunetix360/Acunetix-360-GitHub-Actions@v1.0.1
         with:
           website-id: '******' # FILL HERE
           scan-type: 'FullWithSelectedProfile'
@@ -58,6 +78,8 @@ jobs:
           user-id: ${{ secrets.ACUNETIX_USER_ID }}
           api-token: ${{ secrets.ACUNETIX_API_TOKEN }}
           base-url: 'https://online.acunetix.com'
+          wait-for-completion: false
+          fail-on-level: 'DoNotFail'
       # Displays output for action
       - name: Display Scan Request Message
         run: echo "${{ steps.acunetix-360-scan-step.outputs.scan-message }}"
