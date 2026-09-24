@@ -40,5 +40,5 @@ outputs:
   scan-message:
     description: 'Scan message for requested scan.'
 runs:
-  using: 'node20'
+  using: 'node24'
   main: 'dist/index.js'
